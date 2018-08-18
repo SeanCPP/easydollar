@@ -7,7 +7,7 @@ pip install easydollar
 
 Floating-Points should **never** be used in money calculations!
 
-This module contains the **USD** data-type, which can replace clunky "BigInt" interfaces for handling and representing cash without using *any* floating-point values or arithmetic.
+This module contains the **USD** data-type, which can replace clunky "BigDecimal" interfaces for handling and representing cash without using *any* floating-point values or arithmetic.
 
 The intuitive nature of this class will become obvious as you incorporate it in your existing projects.
 *For example,*
