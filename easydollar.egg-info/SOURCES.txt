@@ -1,0 +1,9 @@
+README.md
+setup.py
+easydollar/USD.py
+easydollar/__init__.py
+easydollar/examples.py
+easydollar.egg-info/PKG-INFO
+easydollar.egg-info/SOURCES.txt
+easydollar.egg-info/dependency_links.txt
+easydollar.egg-info/top_level.txt
