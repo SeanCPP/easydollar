@@ -5,16 +5,15 @@
 pip install easydollar
 ```
 
-Floating-Points should **never** be used in money calculations!
+Floating-Point values should **not** be used in money calculations.
+Python's **Decimal** or *BigDecimal* in Java are a bit clunky to use for quick
+prototyping.
 
-This module contains the **USD** data-type, which can replace clunky "BigDecimal" interfaces for handling and representing cash without using *any* floating-point values or arithmetic.
+This module is useful for **str**-parsed US-Dollar amounts (from user input, or a .*txt*/.*csv*/.*xls*)
 
-The intuitive nature of this class will become obvious as you incorporate it in your existing projects.
-*For example,*
-If you're getting the cash amount data from user input or from reading a file, you can just wrap the **str** with *usd()*
-```python
-amount = usd(input('Enter cash amount $'))
-```
+
+This is the **wrong** module for cent calcuations that need three or more decimal-point places (like gas prices or some APR calculations)
+
 
 
 **Note**
