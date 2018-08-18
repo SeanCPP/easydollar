@@ -11,7 +11,7 @@ setuptools.setup(
     description="A simple, light-weight data type for handling cash (in USD)",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
+    url="https://github.com/SeanCPP/easydollar",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3.6",
