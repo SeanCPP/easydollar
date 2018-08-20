@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="easydollar",
-    version="1.0.0",
+    version="1.0.1",
     author="Sean Patrick Franklin",
     author_email="sean.patrick516@gmail.com",
     description="A simple, light-weight data type for handling cash (in USD)",

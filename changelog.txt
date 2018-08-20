@@ -1,0 +1,5 @@
+********
+v1.0.1
+
+* Added USD.raw_str() method
+* Updated parsing in easydollar.usd() to allow dollar-sign

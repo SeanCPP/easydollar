@@ -1,6 +1,6 @@
 """
 USD.py | US Dollar\n
-Light-weight data type for accurate currency-based calculations
+Light-weight data type for accurate USD-based calculations
 """
 
 
@@ -74,6 +74,10 @@ class USD:
     # Public Methods
     ###################################
     
+    def raw_str(self):
+        d, c = self.__parsecents()
+        return f'{d}.{c:02d}'
+
     def with_interest(self, percent):
         """ Returns a new USD with interest applied. """
         temp = self
@@ -122,6 +126,8 @@ def usd(s):
     1. '50.67' 
     2. '100'
     3. '0.500'"""
+    
+    s = s.replace('$', '')
 
     if not '.' in s:
         try:
@@ -134,4 +140,3 @@ def usd(s):
             return USD(int(dollars), int(cents))
         except Exception:
             raise ValueError('Argument must be a str of a dollar amount.')
-
