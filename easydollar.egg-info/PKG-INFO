@@ -1,24 +1,41 @@
 Metadata-Version: 2.1
 Name: easydollar
-Version: 1.0.0
+Version: 1.0.1
 Summary: A simple, light-weight data type for handling cash (in USD)
-Home-page: https://github.com/pypa/sampleproject
+Home-page: https://github.com/SeanCPP/easydollar
 Author: Sean Patrick Franklin
 Author-email: sean.patrick516@gmail.com
 License: UNKNOWN
-Description: # easydollar | py
+Description: ### What's new in V1.0.1
+        
+        1. **New method** *USD.raw_str()* : Returns a **str** without display formatting.
+        
+        2. *usd()* : Inclusion of a dollar-sign ($) is now allowed in the function argument.
+        
+        #### Example
+        ```python
+        cash = usd('$5000.67')
+        print(cash) # Output: $5,000.67
+        print(cash.raw_str()) # Output: 5000.67
+        ```
+        
+        
+        # easydollar | py
         ###### written by Sean Franklin (sean.patrick516@gmail.com)
         
-        Floating-Points should **never** be used in money calculations!
-        
-        This module contains the **USD** data-type, which can replace clunky "BigInt" interfaces for handling and representing cash without using *any* floating-point values or arithmetic.
-        
-        The intuitive nature of this class will become obvious as you incorporate it in your existing projects.
-        *For example,*
-        If you're getting the cash amount data from user input or from reading a file, you can just wrap the **str** with *usd()*
-        ```python
-        amount = usd(input('Enter cash amount $'))
         ```
+        pip install easydollar
+        ```
+        
+        Floating-Point values should **not** be used in money calculations.
+        Python's **Decimal** or *BigDecimal* in Java are a bit clunky to use for quick
+        prototyping.
+        
+        This module is useful for **str**-parsed US-Dollar amounts (from user input, or a .*txt*/.*csv*/.*xls*)
+        
+        
+        This is the **wrong** module for cent calcuations that need three or more decimal-point places (like gas prices or some APR calculations)
+        
         
         
         **Note**
@@ -165,6 +182,7 @@ Description: # easydollar | py
         
         
         ## Other features of note:
+        
         
         #### with_interest(percent)
         ```python
