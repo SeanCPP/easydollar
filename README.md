@@ -1,3 +1,17 @@
+### What's new in V1.0.1
+
+1. **New method** *USD.raw_str()* : Returns a **str** without display formatting.
+
+2. *usd()* : Inclusion of a dollar-sign ($) is now allowed in the function argument.
+
+#### Example
+```python
+cash = usd('$5000.67')
+print(cash) # Output: $5,000.67
+print(cash.raw_str()) # Output: 5000.67
+```
+
+
 # easydollar | py
 ###### written by Sean Franklin (sean.patrick516@gmail.com)
 
@@ -160,6 +174,7 @@ current_payment = my_usd.distribute(remaining_term)[0]
 
 
 ## Other features of note:
+
 
 #### with_interest(percent)
 ```python
