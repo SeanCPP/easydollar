@@ -1,14 +1,13 @@
-### What's new in V1.0.1
+### What's new in v1.0.2
 
-1. **New method** *USD.raw_str()* : Returns a **str** without display formatting.
-
-2. *usd()* : Inclusion of a dollar-sign ($) is now allowed in the function argument.
+* Improved parsing of easydollar.usd() to allow commas (eg '$1,000.00')
+* Changed the output of USD.__repr__ to improve readability
+* Fixed a major logical error in USD.distribute(). It should now function as intended.
 
 #### Example
 ```python
-cash = usd('$5000.67')
-print(cash) # Output: $5,000.67
-print(cash.raw_str()) # Output: 5000.67
+cash = usd('$5,000.67')
+print(repr(cash)) # Output: USD(dollars=5000, cents=67)
 ```
 
 

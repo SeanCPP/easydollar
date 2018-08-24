@@ -1,4 +1,11 @@
 ********
+v1.0.2
+
+* Improved parsing of easydollar.usd() to allow commas (eg '$1,000.00')
+* Changed the output of USD.__repr__ to improve readability
+* Fixed a major bug in USD.distribute(). It should now function as intended.
+
+********
 v1.0.1
 
 * Added USD.raw_str() method

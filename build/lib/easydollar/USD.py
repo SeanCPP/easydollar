@@ -64,7 +64,8 @@ class USD:
         return float(f'{d}.{c}')
     
     def __repr__(self):
-        return f'USD(cents={self.cents})'
+        d, c = self.__parsecents()
+        return f'USD(dollars={d}, cents={c})'
 
     def __str__(self):
         dollar, cent = self.__parsecents()
@@ -98,11 +99,13 @@ class USD:
     def distribute(self, n):
         """ Returns a list of USDs such that each element could be added together to get the original value.
         """
-        low = round(self.cents / n)
+        low = math.floor(self.cents / n)
+
         high = low + 1
+
         num_highs = self.cents % n
         num_lows = n - num_highs
-
+        
         lows = [USD(cents=low) for _ in range(num_lows) ]
         highs = [USD(cents=high) for _ in range(num_highs)]
 
@@ -125,9 +128,13 @@ def usd(s):
     Example arguments: 
     1. '50.67' 
     2. '100'
-    3. '0.500'"""
-    
-    s = s.replace('$', '')
+    3. '$0.500'
+    4. '$5,000.99'
+    """
+    if ',' in s:
+        s = s.replace(',', '')
+    if '$' in s:
+        s = s.replace('$', '')
 
     if not '.' in s:
         try:
